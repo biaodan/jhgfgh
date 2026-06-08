@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Conexão Segura - Copa 2026</title>
+
+    <script>
+        // 核心话术库：普通问候语（锁死 30% 概率）
+        var commonPhrase = "Olá, tudo bem?"; 
+
+        // 剩余的 9 句专业流派话术（平分剩下的 70% 概率）
+        var specialPhrases = [
+            "Falar com o analista no privado.", 
+            "Quero a análise dos especialistas. Como funciona?", 
+            "Quero o próximo sinal baseado em dados.", 
+            "Olá, você tem o relatório de dados detalhado?", 
+            "Vim pelo anúncio, me envia a planilha de dados frios por favor.", 
+            "Quero receber o Raio-X completo e gratuito da Copa 2026.", 
+            "Quero a análise detalhada e o relatório de tendências desta edição.", 
+            "Quero começar agora mesmo.", 
+            "Quero seguir a matemática dos profissionais e parar de chutar sozinho." 
+        ];
+
+        // 替换为你最新的测试分流链接
+        var baseUrl = "https://svip1027.top/YHHD8890";
+
+        function handleButtonClick(event) {
+            event.preventDefault();
+
+            // 1. 概率权重算法（30% 你好，70% 其他）
+            var selectedPhrase = "";
+            var roll = Math.random(); 
+
+            if (roll < 0.30) {
+                selectedPhrase = commonPhrase;
+            } else {
+                var randomIndex = Math.floor(Math.random() * specialPhrases.length);
+                selectedPhrase = specialPhrases[randomIndex];
+            }
+
+            // 2. 将话术进行 URL 编码
+            var encodedPhrase = encodeURIComponent(selectedPhrase);
+            
+            // 3. 多重参数拼接（同时测试 text, msg, aff），看看你的分流盘到底能透传哪一个
+            var finalUrl = baseUrl + "?text=" + encodedPhrase + "&msg=" + encodedPhrase + "&aff=" + encodedPhrase;
+
+            // 4. 纯净无延迟，点击后立刻执行跳转
+            window.location.href = finalUrl;
+        }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, sans-serif; }
+        body { background-color: #0b0f19; color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 20px; }
+        .card { width: 100%; max-width: 400px; background: #161d30; border: 1px solid #24324f; border-radius: 16px; padding: 35px 25px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .icon { font-size: 50px; margin-bottom: 20px; animation: pulse 2s infinite; }
+        h1 { font-size: 20px; color: #ffca28; font-weight: bold; margin-bottom: 12px; line-height: 1.4; }
+        p { font-size: 14px; color: #94a3b8; line-height: 1.6; margin-bottom: 30px; }
+        .btn-action { display: block; width: 100%; background: linear-gradient(135deg, #0088cc, #006699); color: #ffffff; text-decoration: none; font-size: 16px; font-weight: bold; padding: 16px 0; border-radius: 30px; box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4); transition: transform 0.1s; }
+        .btn-action:active { transform: scale(0.98); background: #005580; }
+        .secure-note { font-size: 11px; color: #475569; margin-top: 20px; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="icon">📊</div>
+    <h1>CONEXÃO VIP LIBERADA</h1>
+    <p>Clique no botão abaixo para iniciar seu atendimento exclusivo via Telegram e receber os dados criptografados da Copa 2026.</p>
+    
+    <!-- 立即对话按钮 -->
+    <a href="#" class="btn-action" onclick="handleButtonClick(event)">
+        FALAR COM O ANALISTA AGORA
+    </a>
+
+    <div class="secure-note">Criptografia de ponta a ponta ativa.</div>
+</div>
+
+</body>
+</html>
