@@ -22,8 +22,8 @@
             "Quero seguir a matemática dos profissionais e parar de chutar sozinho." 
         ];
 
-        // 替换为你最新的测试分流链接
-        var baseUrl = "https://svip1027.top/YHHD8890";
+        // 直连你的专用 Telegram 客服号
+        var tgUsername = "jiuge5566";
 
         function handleButtonClick(event) {
             event.preventDefault();
@@ -39,13 +39,13 @@
                 selectedPhrase = specialPhrases[randomIndex];
             }
 
-            // 2. 将话术进行 URL 编码
+            // 2. 将话术进行标准的 URL 编码
             var encodedPhrase = encodeURIComponent(selectedPhrase);
             
-            // 3. 多重参数拼接（同时测试 text, msg, aff），看看你的分流盘到底能透传哪一个
-            var finalUrl = baseUrl + "?text=" + encodedPhrase + "&msg=" + encodedPhrase + "&aff=" + encodedPhrase;
+            // 3. 官方标准直连带字格式，直接拉起 TG 客户端并注入文字
+            var finalUrl = "https://t.me/" + tgUsername + "?text=" + encodedPhrase;
 
-            // 4. 纯净无延迟，点击后立刻执行跳转
+            // 4. 点击后立刻秒速执行跳转
             window.location.href = finalUrl;
         }
     </script>
@@ -70,7 +70,7 @@
     <h1>CONEXÃO VIP LIBERADA</h1>
     <p>Clique no botão abaixo para iniciar seu atendimento exclusivo via Telegram e receber os dados criptografados da Copa 2026.</p>
     
-    <!-- 立即对话按钮 -->
+    <!-- 立即对话 核心按钮 -->
     <a href="#" class="btn-action" onclick="handleButtonClick(event)">
         FALAR COM O ANALISTA AGORA
     </a>
